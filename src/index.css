@@ -1,0 +1,78 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@100..900&display=swap');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+:root {
+  /* Soil */
+  --soil-50: #FBF5EF;
+  --soil-100: #F2E4D5;
+  --soil-200: #E8D2B5;
+  --soil-300: #D9A87A;
+  --soil-400: #C58A4D;
+  --soil-500: #B5651D;
+  --soil-600: #9A551A;
+  --soil-700: #7A3F12;
+  --soil-800: #5C2F0E;
+  --soil-900: #3E1F08;
+  /* Leaf / Avocado */
+  --leaf-50: #F0F4E8;
+  --leaf-300: #8FB339;
+  --leaf-500: #5B7F2A;
+  --leaf-700: #3A5318;
+  --avocado-50: #f0f7e8;
+  --avocado-300: #a8c84a;
+  --avocado-500: #5B7F2A;
+  --avocado-600: #4f9a3a;
+  --avocado-700: #3A5318;
+  /* Sand / neutrals */
+  --sand-50: #FAF7F1;
+  --sand-100: #EDE6D6;
+  --sand-300: #C9BFA9;
+  --sand-500: #6B6354;
+  --sand-900: #2C2820;
+  /* Status */
+  --status-info: #3b82f6;
+  --status-warning: #D97706;
+  --status-danger: #B23A26;
+  --status-success: #5B7F2A;
+  /* Aliases */
+  --bark: #2C2820;
+  --bone: #FAF7F1;
+}
+@layer base {
+  body {
+    @apply bg-sand-50 text-sand-900 font-sans antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif tracking-tight;
+  }
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-sand-300 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-soil-300;
+}
+.glass-panel {
+  @apply bg-white/80 backdrop-blur-md border border-white/40 shadow-sm;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
